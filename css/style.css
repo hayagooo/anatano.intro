@@ -1,0 +1,631 @@
+.navbar-home{
+    background:rgba(0, 0, 0, 0.6);
+}
+
+.nav-link{
+    color: rgba(255, 255, 255, 1)!important;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(../font/Nunito-Regular.ttf);
+}
+
+*{
+    font-family: Nunito;
+    transition: .3s ease-in-out;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.px-7{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.text-12{
+    font-size: 12px!important;
+}
+
+.bg-black{
+    background: #1A1A1A;
+}
+
+.nav-item{
+    padding: 15px 0;
+}
+
+.jumbotron, .carousel-xl{
+    min-height: 100vh;
+    border-radius: 0rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding-left: 2rem;
+    padding-top: 170px;
+}
+
+.carousel-overlay, .carousel-item::before{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 100vh;
+    background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(0, 0, 0, .8), rgba(134, 134, 134, 0.2))!important;
+}
+
+.hotlist .carousel-item::before{
+    content: '';
+    
+}
+
+.backgroundAnime{
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0 ;
+    bottom:0;
+    z-index: -2;
+
+}
+
+.jumbotron::before{
+    content: '';
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+    width: 1px;
+    left: 105px;
+    top: 0px;
+    bottom: 0px;
+    
+}
+
+.jumbotron ul {
+    list-style: none;
+    z-index: 999;
+    width: 70px;
+    left: 30px;
+    top: 150px;
+}
+
+.jumbotron ul li {
+    display: flex;
+    margin-bottom: 40px;
+}
+.jumbotron ul li , .hotlist ul li{
+    width: 35px;
+    transition: .2s all;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: transparent;
+}
+
+.jumbotron ul li:hover,
+.carousel-indicators li.active {
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.dots{
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.jumbotron .content{
+    padding-left: 8rem;
+}
+
+.btn-danger{
+    background-color: #E01818;
+    border-color: #E01818;
+}
+
+
+.jumbotron .chara{
+    height: 100vh;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.anime-info{
+    margin-top: 10rem;
+}
+
+.anime-info p{
+    font-size: 18px;
+}
+
+#release-date{
+    font-size: 14px;
+}
+
+.carousel-indicators{
+    display: block!important;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+.slider-preview{
+    position: absolute;
+    top: 50px;
+    right: -140px;
+}
+
+@media (max-width:1200px){
+    .slider-preview{
+        position: relative;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+.animePreview .box{
+    width: 250px;
+    height: 170px;
+    position: relative;
+    padding-right: 20px;
+}
+
+.animePreview .box img{
+    width: 100%;
+    height: 100%;
+}
+
+.animePreview .box .overlay{
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.animePreview .slick-current .box .overlay{
+    opacity: 1;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(122.68deg, rgba(224, 144, 24, 0.53) 0%, rgba(224, 24, 24, 0.45) 100%);
+    border: 5px solid rgba(255, 255, 255, 0.26);
+    box-sizing: border-box;
+
+}
+
+.list-anime{
+    padding: 50px;
+    margin-left: 16.666667%;
+    background: #232323;
+    height: 826px;
+}
+
+.nav-genre{
+    background-color: #2E2E2E!important;
+    padding-top: 100px;
+}
+
+.nav-genre .btn-nav{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    background-color: #404040;
+    color: white;
+    position: absolute;
+    right: -23px;
+    z-index: 100;
+    top: -50px;
+
+}
+
+.nav-genre ul{
+    list-style: none;
+    padding: 5px;
+}
+
+.nav-genre ul li {
+    width: 100%;
+    padding: 10px 10px 10px 23px;
+    margin: 20px 0px;
+    border: 2px solid #2E2E2E;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    line-height: 1;
+}
+.nav-genre ul li svg{
+    font-size: 14px;
+}
+
+.nav-genre ul li.active svg{
+    display: block!important;
+}
+
+.nav-genre ul li.active,
+.nav-genre ul li:hover{
+    background: rgba(224, 144, 24, 0.37);
+    border: 2px solid #FFA620;
+}
+
+.list-anime .card-anime{
+    max-width: 20%;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.list-anime .card-anime .judul{
+    font-size: 14px;
+    height: 42px;
+}
+
+.list-anime .card-anime .overlay{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, .75);
+    transform: translateY(280px);
+    padding-top: 118px;
+    height: 266px;
+
+}
+
+.list-anime .card-anime:hover .overlay{
+    transform: translateY(0px);
+}
+
+
+.list-anime .card-anime .overlay p{
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.list-anime .card-anime .overlay .text-warning svg{
+    font-size: 14px;
+    margin: 0px 2px;
+}
+
+.list-anime .card-anime img{
+    width: 100%;
+    height: 266px;
+}
+
+.list-anime .card-anime .date{
+    position: absolute;
+    left:5px;
+    top: 20px;
+    padding: 5px 10px;
+    background-color: white;
+    z-index: 100;
+    font-size: 12px;
+}
+.ongoing{
+    background-color: #6177EC!important;
+}
+
+.complete{
+    background-color: #23E759!important;
+}
+
+.jumbotron-landing{
+    background: #232323;
+    padding-top: 200px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.red-line{
+    position: absolute;
+    width: 89px;
+    height: 13px;
+    left: -5px;
+    background-color: #E01818;
+}
+
+.jumbotron-landing p{
+    font-size: 14px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hotlist .carousel-item{
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+}
+.hotlist .carousel-overlay{
+    min-height: 100%;
+}
+
+.hotlist .carousel-item  img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+.hotlist ul{
+    border: 1px solid white;
+    padding: 20px;
+    align-items: center;
+    bottom: -18px;
+    left: -2px;
+    z-index: 99999;
+}
+
+.hotlist ul li {
+    margin: 0px 20px
+}
+
+.hotlist ul li{
+    display: flex;
+    
+}
+
+.hotlist .carousel-indicators{
+    display: flex!important;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+.hotlist .carousel-item h4{
+    padding-top: 5rem;
+}
+
+.features, .work , footer ,.login-page, .detail-anime{
+ background: #232323;
+}
+
+
+.features-img div:nth-child(1) div:nth-child(1){
+    width: 149px;
+    height: 205px;
+
+}
+.features-img div:nth-child(1) div:nth-child(2){
+    width: 149px;
+    height: 120px;
+    margin-top: 18px;
+
+}
+.features-img div:nth-child(2) div:nth-child(1){
+    width: 149px;
+    height: 130px;
+
+}
+.features-img div:nth-child(2) div:nth-child(2){
+    width: 149px;
+    height: 194px;
+    margin-top: 18px;
+}
+
+.features-img div div{
+    background: linear-gradient(152.15deg, rgba(224, 24, 24, 0.58) 0%, rgba(255, 166, 32, 0.58) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.features-img div div svg{
+    font-size: 25px;
+}
+
+.features-img div div img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    z-index: 2;
+}
+
+.features-img svg , .features-img p{
+    z-index: 5;
+}
+
+.absolute-middle {
+    top: 50%;
+    position: absolute!important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: transparent!important;
+}
+
+.work{
+    padding-top: 80px;
+}
+
+.work ul{
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 1rem;
+}
+
+.work ul li {
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+
+.work ul li:hover, .work ul li.active{
+    background-color: #2E2E2E;
+}
+
+.work .card-work{
+    border: 1px solid #2E2E2E;
+    padding: 20px;
+}
+
+.work .card-work:hover{
+    background: #2E2E2E;
+}
+
+.work .card-work .icon{
+    padding: 8px 17px 10px;
+    background: #E01818;
+    font-size: 32px;
+}
+
+.work .card-work .card-title{
+    font-size: 18px;
+}
+
+.work .card-work p{
+    font-size: 14px;
+}
+
+.pre-register{
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.pre-register::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(0, 0, 0, .98), rgba(0, 0, 0, .6),rgba(0, 0, 0, 0.2));
+    z-index: -2;
+}
+
+.pre-register .img-background{
+    z-index: -3!important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 80%;
+}
+
+.time{
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 32px;
+    display: inline-block;
+    padding: 10px 55px;
+    z-index: 10;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+.countDown::before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    right: 10px;
+    z-index: -1;
+    bottom: -10px;
+    border: 1px solid white;
+}
+
+.pre-register .container img{
+    display: block!important;
+}
+@media (max-width:676px){
+    .pre-register .container img{
+        display: inline-block!important;
+    }
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li p{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-login{
+    margin-top: 120px;
+    padding: 0px 6rem !important;
+}
+
+.form-login input, .form-login input:focus{
+    background: #2C2C2C;
+    color: white;
+    border: none;
+}
+
+.right-login{
+    min-height: 100vh;
+}
+
+.right-login::before{
+    content: '';
+    background: linear-gradient(to right, rgba(35, 35, 35, 1), rgba(35, 35, 35, .8), rgba(35, 35, 35, .4));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.box-img div, .box-img div img{
+    width: 234px;
+}
+
+.box-img img{
+    margin-bottom: 20px;
+}
+
+
+.box-img div:nth-child(1) img:nth-child(1){
+    max-height: 361px;  
+}
+
+.box-img div:nth-child(1) img:nth-child(2){
+    max-height: 173px;
+}
+.box-img div:nth-child(2) img:nth-child(1){
+    max-height: 220px;
+}
+.box-img div:nth-child(2) img:nth-child(2){
+    max-height: 316px;
+}
+
+
+.slider-detail{
+    padding-top: 70px;
+}
+
+.slick-dots{
+    position: absolute;
+    top: 0;
+    padding: 0;
+}
+
+.slick-dots li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.slick-dots li button{
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0;
+}
+
+.slick-dots li.slick-active button{
+    background-color: #E01818 ;
+}
