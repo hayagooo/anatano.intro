@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .navbar-home{
     background:rgba(0, 0, 0, 0.6);
 }
@@ -343,8 +347,10 @@
 .hotlist .carousel-item{
     position: relative;
     min-height: 90vh;
-    overflow: hidden;
+    overflow: hidden!important;
+    padding-bottom: 55px;
 }
+
 .hotlist .carousel-overlay{
     min-height: 100%;
 }
@@ -520,12 +526,23 @@
 
 .time{
     background: rgba(255, 255, 255, 0.3);
-    font-size: 32px;
     display: inline-block;
-    padding: 10px 55px;
+    padding: 10px 0px;
     z-index: 10;
+    text-align: center;
+    width: 186px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+}
+
+.time h4{
+    font-size: 32px;
+    display: inline-block;
+}
+
+.time span{
+    display: inline-block;
+    font-size: 14px;
 }
 
 
@@ -666,4 +683,27 @@ footer ul li p{
 
 .slick-dots li.slick-active button{
     background-color: #E01818 ;
+}
+
+@media (max-height:540px) {
+    .hotlist .container{
+        padding-top: 1rem!important;
+    }
+
+    .hotlist .carousel-item h2{
+        margin-top: 2rem!important;
+    }
+
+    .hotlist ul{
+        padding:10px
+    }
+
+    .hotlist ul li {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-height:465px) {
+   
 }
